@@ -1,0 +1,441 @@
+﻿@page "/"
+@using SDDAssessmentTask3.Data
+
+<link href="css/Index.css" rel="stylesheet" />
+
+<body>
+    
+    <div class="myWrapper">
+        <div class="myHeader" id="myHeader"> 
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+                
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        
+        </div>
+    
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+    
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+    
+        <!--Might change this image later if I can find a better one-->
+        <div class="Image">
+            <img src="LogosUsed/Logo.png" width="100%" />
+        </div>
+    
+        <!-- Code for Navbar -->
+        <div class="myInd" id="navbar">            
+            <a href="#RECENT"><div>Recent</div></a>
+            <a href="#POPULAR"><div>Popular</div></a>
+            <a href="#SOON"><div>Coming Soon</div></a>
+            <a href="#SHOP"><div>Shop</div></a>
+            <a href="search"><div>Search Courses</div></a>
+        </div>
+    
+        <!-- Code for Short Introduction -->
+        <div class="myIntroduction">
+            <p>Welcome to Fly A-Way! Here you can explore a variety of courses and lessons on a range of subjects and you can personally arrange your lessons to be either physical or online. We provide the most updated news on changes to the subject curriculum as well as additional information in regards to certain subjects. Unlike other tutoring or coaching centres, we also run a shop will sells textbooks from all years from the latest to the oldest at a cheaper price. In addition, we have secondhand tests and lesson materials from past students from the top schools. For any help you may contact us through the social medias mentioned in <a href="contact">Contact Us</a>. You may also <a href="sign">Sign up</a> to receive notification on the latest news and keep updated daily. Enjoy!</p>
+        </div>
+    
+        <!-- Code for News -->
+        <div class="myNews">
+            <table>
+                <tr>
+                    <th><h3>WHAT'S NEW</h3></th>
+                </tr>
+                <tr>
+                    <td>SDD YEAR 11 HALF YEARLY EXAM 2019 - Hornsby Girls</td>
+                </tr>
+                <tr>
+                    <td>SDD YEAR 11 HALF YEARLY EXAM 2019 SOLUTIONS - Hornsby Girls</td>
+                </tr>
+                <tr>
+                    <td>SDD YEAR 11 HALF YEARLY EXAM 2021 - Hornsby Girls</td>
+                </tr>
+                <tr>
+                    <td>SDD YEAR 11 HALF YEARLY EXAM 2021 SOLUTIONS - Hornsby Girls</td>
+                </tr>
+                <tr>
+                    <td>YEAR 10 MATHSCAPE CHAP 1</td>
+                </tr>                
+            </table>
+    
+            <a href="news"><p>> Check out what's new</p></a>
+        </div>        
+    
+        <!-- Code for Recent Releases -->
+        <div class="myRecent">
+            <a id="RECENT">
+                <h2>SMALL GAMES</h2>
+                <div class="button1" id="button1">
+                        <div class="button" onclick="openRecentContent1()" id="c1">1</div>
+                        <div class="button" onclick="openRecentContent2()" id="c2">2</div>
+                        <div class="button" onclick="openRecentContent3()" id="c3">3</div>
+                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                </div>
+                
+                <div class="buttons2" id="button2">
+                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                        <div class="button" onclick="openRecentContent6()" id="c6">6</div>
+                        <div class="button" onclick="openRecentContent7()" id="c7">7</div>
+                        <div class="button" onclick="openRecentContent8()" id="c8">8</div>
+                </div>
+            </a>
+            <div class="Content1" id="RecentContent1">
+                <p>meow</p>
+            </div>
+    
+            <div class="Content2" id="RecentContent2">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent01.png"></div>
+                    <div><img src="ImagesUsed/recent02.png"></div>
+                    <div><img src="ImagesUsed/recent03.png"></div>
+                    <div><img src="ImagesUsed/recent04.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Otome Game no Hametsu Flag shika Nai Akuyaku</p>
+                    <p>Blue Reflection Ray</p>
+                    <p>100-man no Inochi no Ue ni Ore wa Tatteiru 2nd Season</p>
+                    <p>Vanitas no Carte</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent05.png"></div>
+                    <div><img src="ImagesUsed/recent06.png"></div>
+                    <div><img src="ImagesUsed/recent07.png"></div>
+                    <div><img src="ImagesUsed/recent08.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>Meikyuu Black Company</p>
+                    <p>T7S Longing for Summer Again and Again: Harukaze</p>
+                    <p>Obey Me! Special - Devildom Family Trip</p>
+                    <p>Beyblade Burst Dynamite Battle</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent09.png"></div>
+                    <div><img src="ImagesUsed/recent010.png"></div>
+                    <div><img src="ImagesUsed/recent011.png"></div>
+                    <div><img src="ImagesUsed/recent012.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Cardfight!! Vanguard: overDress (Dub)</p>
+                    <p>Shiroi Suna no Aquatope</p>
+                    <p>Peach Boy Riverside</p>
+                    <p>Shaman King (2021)</p>
+                </div>
+            </div>
+    
+            <div class="Content3" id="RecentContent3">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent001.png"></div>
+                    <div><img src="ImagesUsed/recent002.png"></div>
+                    <div><img src="ImagesUsed/recent003.png"></div>
+                    <div><img src="ImagesUsed/recent004.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Scarlet Nexus</p>
+                    <p>SD Gundamn World Heroes</p>
+                    <p>Night Head 2041</p>
+                    <p>Megami-ryou no Ryoubo-kun</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent005.png"></div>
+                    <div><img src="ImagesUsed/recent006.png"></div>
+                    <div><img src="ImagesUsed/recent007.png"></div>
+                    <div><img src="ImagesUsed/recent008.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>Kobayashi-san Chi no Maid Dragon S</p>
+                    <p>Tsuki ga Michibiku Isekai Douchuu</p>
+                    <p>Cheat Kusushi no Slow Life: Isekai ni Tsukurou</p>
+                    <p>BanG Dream! Movie: Episode of Roselia - II:</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent009.png"></div>
+                    <div><img src="ImagesUsed/recent0010.png"></div>
+                    <div><img src="ImagesUsed/recent0011.png"></div>
+                    <div><img src="ImagesUsed/recent0012.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Seitokai Yakuindomo Movie 2</p>
+                    <p>Sketchbook: Full Color's Picture Drama</p>
+                    <p>Aria the Crepuscolo</p>
+                    <p>Fate/kaleid liner Prisma☆Illya 2wei!</p>
+                </div>
+            </div>
+    
+            <div class="Content4" id="RecentContent4">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent-1.png"></div>
+                    <div><img src="ImagesUsed/recent-2.png"></div>
+                    <div><img src="ImagesUsed/recent-3.png"></div>
+                    <div><img src="ImagesUsed/recent-4.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Tsukipro The Animation 2</p>
+                    <p>Turning Mecard W: Vandyne-ui Bimil</p>
+                    <p>Tokyo 7th Sisters: Bokura wa Aozora ni Naru</p>
+                    <p>Shounan Bakusouzoku</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent-5.png"></div>
+                    <div><img src="ImagesUsed/recent-6.png"></div>
+                    <div><img src="ImagesUsed/recent-7.png"></div>
+                    <div><img src="ImagesUsed/recent-8.jpg"></div>
+                </div>
+                <div class="caption2">
+                    <p>Red Baron</p>
+                    <p>Hover Champs</p>
+                    <p>Doraemon Movie 36: Shin Nobita no Nippon Tanjou</p>
+                    <p>Potemayo Special</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent-9.png"></div>
+                    <div><img src="ImagesUsed/recent-10.png"></div>
+                    <div><img src="ImagesUsed/recent-11.png"></div>
+                    <div><img src="ImagesUsed/recent-12.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>To Heart: Remember My Memories Specials</p>
+                    <p>To Heart: Remember My Memories</p>
+                    <p>Mini Dragon Specials</p>
+                    <p>Baldr Force Exe Resolution</p>
+                </div>
+            </div>
+    
+            <div class="Content5" id="RecentContent5">
+                <div class="row1">
+                    <div><img src="ImagesUsed/recent--1.png"></div>
+                    <div><img src="ImagesUsed/recent--2.png"></div>
+                    <div><img src="ImagesUsed/recent--3.png"></div>
+                    <div><img src="ImagesUsed/recent--4.png"></div>
+                </div>
+                <div class="caption1">
+                    <p>Kono Danshi, Uchuujin to Tatakaemasu.</p>
+                    <p>Zero no Tsukaima: Princesses no Rondo Picture Drama</p>
+                    <p>Nanami-chan 3rd Series</p>
+                    <p>Nanami-chan 2nd Series</p>
+                </div>
+                <div class="row2">
+                    <div><img src="ImagesUsed/recent--5.png"></div>
+                    <div><img src="ImagesUsed/recent--6.png"></div>
+                    <div><img src="ImagesUsed/recent--7.png"></div>
+                    <div><img src="ImagesUsed/recent--8.png"></div>
+                </div>
+                <div class="caption2">
+                    <p>D4DJ Petit Mix</p>
+                    <p>Heartcatch Precure! Movie: Hana no Miyako de Fashion</p>
+                    <p>Futari wa Precure: Max Heart Movie 1</p>
+                    <p>Yes! Precure 5 Movie: Kagami no Kuni no Miracle</p>
+                </div>
+                <div class="row3">
+                    <div><img src="ImagesUsed/recent--9.png"></div>
+                    <div><img src="ImagesUsed/recent--10.png"></div>
+                    <div><img src="ImagesUsed/recent--11.png"></div>
+                    <div><img src="ImagesUsed/recent--12.png"></div>
+                </div>
+                <div class="caption3">
+                    <p>Mobile Suit SD Gundam Mk V</p>
+                    <p>Cyborg 009 (1979)</p>
+                    <p>Chikyuu Bouel Kazoku</p>
+                    <p>Hurrican Polymar</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Code for Subjects List -->
+        <div class="myList">
+            <h3 onclick="openList()">COURSES<div class="later">Click Here</div></h3>
+            <div class="Listing" id="myDropdown">
+                <div class="closeList" onclick="closeList()" id="closeList">X</div>
+                <ul>
+                    <li>English</li>
+                    <li>Maths</li>
+                    <li>Science</li>
+                    <li>Technology</li>
+                    <li>Music</li>
+                    <li>Arts</li>
+                    <li>Drama</li>
+                    <li>Geography</li>
+                    <li>History</li>
+                    <li>French</li>
+                    <li>Chinese</li>
+                    <li>German</li>
+                    <li>Korean</li>
+                    <li>Spanish</li>
+                    <li>Japanese</li>
+                    <li>Visual Arts</li>
+                    <li>Visual Design</li>
+                    <li>Engineering</li>
+                    <li>Food Tech</li>
+                </ul>
+                <ul>
+                    <li>Astronomy</li>
+                    <li>Geology</li>
+                    <li>Physics</li>
+                    <li>Chemistry</li>
+                    <li>Biology</li>
+                    <li>Literature</li>
+                    <li>Poetry</li>
+                    <li>Photography</li>
+                    <li>PDHPE</li>
+                    <li>Sports</li>
+                    <li>Painting</li>
+                    <li>Drawing</li>
+                    <li>Etching</li>
+                    <li>IPT</li>
+                    <li>SDD</li>
+                    <li>Cyber Security</li>
+                    <li>Robotics</li>
+                    <li>Singing</li>
+                    <li>Dancing</li>
+                </ul>
+            </div>
+        </div>
+    
+    
+        <!-- Code for Last Season Releases -->
+        <div class="mySeason">
+            <h3 onclick="openSeason()">LATEST POST<div class="later">Click Here</div></h3>
+            <div class="Season" id="Season">
+                <div class="closeSeason" onclick="closeSeason()" id="closeSeason">X</div>
+                <img src="Ad/CafeScenery.png"/ width="90%">
+            </div>
+        </div>
+    
+       
+        <div class="mySoon">
+            <a id="SOON"><h2>Coming Soon</h2></a>
+            
+            <div class="AnimeComing">
+                <div class="Anime">
+                    <img src="Images/MathsText1.png" width="100%" class="ImagesUsed">
+                    <div class="overlay">YEAR 10 MATHSCAPE CHAP 1</div>
+                </div>
+                <div class="Anime">
+                    <img src="Images/MathsText2.png" width="100%" class="ImagesUsed">
+                    <div class="overlay">YEAR 10 MATHSCAPE CHAP 2</div>
+                </div>
+                <div class="Anime">
+                    <img src="Images/MathsText3.png" width="100%" class="ImagesUsed">
+                    <div class="overlay">YEAR 10 MATHSCAPE CHAP 3</div>
+                </div>
+                <div class="Anime">
+                    <img src="Images/MathsText4.png" width="100%" class="ImagesUsed">
+                    <div class="overlay">YEAR 10 MATHSCAPE CHAP 4</div>
+                </div>
+            </div>
+    
+            <a href="news"><p>> Coming Soon</p></a>
+        </div> 
+    
+        <!-- Code for Event -->
+        <div class="myEvent">
+            <div class="Info">
+                <a id="SHOP"><h2>UPCOMING TALK ON SUBJECT SELECTIONS</h2></a>
+                <p>Come and visit Sydney Townhall to experience once in a life opportunity to meet all the past successful HSC students in person! For just <b>$35</b>, you have all the access to wander aroundand  strike a conversation with the past students and grab their autographs. Food and drinks will be provided for you as well as pamphlets and information on subject selection. You may also be allowed to buy PastPapers and/or notes directly from the past students themselves.</p>
+                <p>So what are you waiting for? Come and visit the Talk on Subject Selection on the</p>
+                <div class="larger">
+                    <p><em>17th October 2022</em></p>
+                    <p><em>11am - 6pm</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code for Shop -->
+    <div class="myShop">
+        <div class="Shop">
+            <div class="PastPapers" id="SHOP">
+                <img src="Images/Study.gif" alt="Avatar" class="image" width=100%>
+                <div class="middle">
+                  <div class="text">Past Papers</div>
+                </div>
+            </div>
+              
+            <div class="PastTests">
+                <img src="Images/Study1.gif" alt="Avatar" class="image" width=100%>
+                <div class="middle">
+                    <div class="text">Past Tests</div>
+                </div>
+            </div>
+              
+            <div class="PastNotes">
+                <img src="Images/Study2.gif" alt="Avatar" class="image" width=100%>
+                <div class="middle">
+                    <div class="text">Past Notes</div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="shop" ><p>> Go to Shop</p></a>
+
+    </div>
+
+    
+
+    <div class="myGap"></div>
+
+    <!-- Code for Contact Information and Footer -->
+    <div class="myContact">
+        <div class="Logo">
+            <a href="https://www.facebook.com/sophia.cheng.3762584/" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+            <a href="https://www.instagram.com/anime_world0222/"  title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+            <a href="https://twitter.com/Anime_World22"  title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+            <a href="a.anime.world22@gmail.com" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+        </div>
+
+        <div class="Links">
+            <div><a href=" ">Home</a></div>
+            <div><a href="about">About Us</a></div>
+            <div><a href="sign" target="_blank">Sign Up</a></div>
+            <div class="exception"><a href="contact">Contact Us</a></div>
+        </div>
+        
+        <div class="Footnote">ⓒ Fly A-way Inc. All rights reserved</div>
+    </div>
+
+    <audio controls autoplay loop>
+        <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+    </audio> 
+
+
+</body>
+
+
+  

@@ -1,0 +1,117 @@
+﻿@page "/help"
+
+<title>HELP - Fly A-Way</title>
+<link href="css/Help.css" rel="stylesheet" />
+
+
+
+<body>
+
+
+    <div class="myWrapper" id="Wrapper">
+
+        <!-- Code for header -->
+        <div class="myHeader" id="myHeader">
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+
+        <!-- Code for main body content -->
+        <div class="myBody">
+            video
+        </div>
+
+        
+
+        <!-- Code for Ad -->
+        <div class="Ad">
+            <div class="Photoshop">
+                <div><img src="Ad/Scenery.png" width="100%"></div>
+                <div>
+                    <h2>Snap a Pic!</h2>
+                    <p>Want to learn how to take fabulous, professional ImagesUsed? Or learn how to edit pictures to perfection? Well join the Snap a Pic! A community where everyone, regardless of their skills, are welcomed to take online classes to learn how to become a pro at photography and photoshop. Release your inner artistic talent and join the family!</p>
+                    <p>Classes begin on the 22 September 2021 and run through a course of 3 months. You are always free to join whenever you’re ready and withdraw.</p>
+                    <em>
+                        <p>Email: snap_a_pic23@gmail.com</p>
+                        <p>Phone Number: 0458 478 219</p>
+                    </em>
+                </div>
+                <div><img src="Ad/BeachScene.png" width="100%"></div>
+            </div>
+            <div class="TasteLikeMagicAd"><img src="Ad/TasteLikeMagic.png" width="70%"></div>
+        </div>
+
+        <div class="myGap"></div>
+
+        <!-- Code for Contact Information and Footer -->
+        <div class="myContact">
+            <div class="Logo">
+                <a href="https://www.facebook.com/sophia.cheng.3762584/" target="_blank" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+                <a href="https://www.instagram.com/anime_world0222/" target="_blank" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+                <a href="https://twitter.com/Anime_World22" target="_blank" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+                <a href="a.anime.world22@gmail.com" target="_blank" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+
+        <audio controls autoplay loop>
+            <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+</body>
+
+
+
+@code {
+
+}

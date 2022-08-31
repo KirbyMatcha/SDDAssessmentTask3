@@ -1,0 +1,655 @@
+﻿@page "/search"
+
+<title>SEARCH - Fly A-way</title>
+<link href="css/Search.css" rel="stylesheet" />
+
+
+<body>
+    <div class="myWrapper" id="Wrapper">
+
+         <!-- Code for Header -->
+        <div class="myHeader" id="myHeader">
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+
+        <!-- Code for Table -->
+        <div class="myBody">
+            <h2>Search Course</h2>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Course..." title="Type in a name">
+            <table id="myTable">
+                <tr class="header">
+                    <th style="width:90%;">Course Name</th>
+                    <th style="width:10%;">Cost</th>
+                </tr>
+                <tr>
+                    <td>Maths - Multiplication</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Addition</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Subtraction</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Division</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Probability</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Problem Solving</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <td>Maths - Trigonometry</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Fractions</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Decimals</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Indices</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Angles</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Circle Geometry</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Congruent Traingles</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Similar Triangles</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Ratios</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Algebra</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Volumes</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Surface Areas</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Consumer Arithemetic</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Deductive Geometry</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Quadratic Equations</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Cubic Equations</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Graphs in Number Plane</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Data Analysis and Evaluation</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Functions</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Similarity</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Curve Sketching</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Polynomials</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Maths - Logarithms</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>English - Poetry Introduction</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Poetry Techniques</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Language Techniques</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Film Techniques</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Grammar</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Spelling</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Punctuation</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Comprehension</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Quoting</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Essays</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Narratives</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Persuasive Texts</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Comparative Essays</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Descriptive Texts</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Analytical Text</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>English - Plays</td>
+                    <td>$19</td>
+                </tr>
+                <tr>
+                    <td>Science - Issac Newton's 3 Laws of Energy</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Combustion</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Corrosion</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Ionic Bonding</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - States of Matter</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Waves</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - DNA, Genes, Chromosomes</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - DNA replication</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Meiosis</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Mitosis</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Circulatory System</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Respiratory System</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Photosynthesis</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Cells</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Osmosis</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Atoms</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Periodic Table and Trends</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Physics Introduction</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Science - Physics</td>
+                    <td>$160</td>
+                </tr>
+                <tr>
+                    <td>Science - Biology Introduction</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Science - Biology</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Science - Chemistry Introduction</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Science - Chemistry</td>
+                    <td>$160</td>
+                </tr>
+                <tr>
+                    <td>Science - Stars</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Science - Cellular Respiration</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Music Introduction</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <td>Music Theory</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Music - Flute Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Piano Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Clarinet Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Violin Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - French Horn Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Trumpet Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - basoon Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Guitar Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Oboe Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Saxaphone Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Trombone Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Piccolo Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Bass Guitar Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Acoustic guitar Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Drums Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Mallet percussion Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Viola Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Cello Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Double Bass Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Triangles Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - euphonium Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Choir Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Opera Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Bass Clarinet Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Tuba Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Harp Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Gong Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Accordian Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Electric Guitar Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - organ Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - Maracas Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Music - tambourines Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance Introduction</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <td>Dance - Ballet Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Jazz Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - K-pop Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Hip-Hop Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Pop Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - SPanish Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Waltz Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Cha-Cha Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Tango Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Dance - Foxtrot Lessons</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts Introduction</td>
+                    <td>$50</td>
+                </tr>
+                <tr>
+                    <td>Arts - Painting</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Water Painting</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Acrylic Painting</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Ink Painting</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Colour Theory</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Paint Theory</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Frames</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Clay</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Sculpture</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Moulding</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Abstract</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Realism</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Architecture</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - illusionary Space</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Comics/Manga</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Still-life</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Photography</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Cubism</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Impressionism</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Decorative Arts</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Contemporary</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Op Art</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Theatre</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Arts - Visual Art</td>
+                    <td>$100</td>
+                </tr>
+            </table>
+            
+        </div>
+
+
+        <div class="myGap"></div>
+
+        <!-- Code for Contact Information and Footer -->
+        <div class="myContact">
+            <div class="Logo">
+                <a href="https://www.facebook.com/sophia.cheng.3762584/" target="_blank" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+                <a href="https://www.instagram.com/anime_world0222/" target="_blank" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+                <a href="https://twitter.com/Anime_World22" target="_blank" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+                <a href="a.anime.world22@gmail.com" target="_blank" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+        
+    </div>
+
+</body>
+

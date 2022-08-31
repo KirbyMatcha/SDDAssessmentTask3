@@ -1,0 +1,150 @@
+﻿@page "/news"
+
+<title>NEWS - Fly A-way</title>
+<link href="css/News.css" rel="stylesheet" />
+
+
+
+
+<body>
+    
+    
+    <div class="myWrapper" id="Wrapper">
+        
+        <!-- Code for Header -->
+        <div class="myHeader" id="myHeader">
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+
+        <!-- Code for Trailer -->
+        <div class="myBody">
+            <video autoplay loop id="myVideo" width=100% height=100%>
+                <source src="Videos/Music.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Code for Body Content -->
+        <div class="Content">
+            <h2>New Past Papers and Textbook Chapters</h2>
+            <div class="row">
+                <div class="container">
+                    <img src="Images/SDDTest1.png">
+                    <div class="overlay">
+                        <div class="text">SDD YEAR 11 HALF YEARLY EXAM 2019 - Hornsby Girls</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/SDDSolution1.png">
+                    <div class="overlay">
+                        <div class="text">SDD YEAR 11 HALF YEARLY EXAM 2019 SOLUTIONS - Hornsby Girls</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/SDDTest2.png">
+                    <div class="overlay">
+                        <div class="text">SDD YEAR 11 HALF YEARLY EXAM 2021 - Hornsby Girls</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/SDDSolution2.png">
+                    <div class="overlay">
+                        <div class="text">SDD YEAR 11 HALF YEARLY EXAM 2021 SOLUTIONS - Hornsby Girls</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <img src="Images/MathsText1.png">
+                    <div class="overlay">
+                        <div class="text">YEAR 10 MATHSCAPE CHAP 1</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/MathsText2.png">
+                    <div class="overlay">
+                        <div class="text">YEAR 10 MATHSCAPE CHAP 2</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/MathsText3.png">
+                    <div class="overlay">
+                        <div class="text">YEAR 10 MATHSCAPE CHAP 3</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="Images/MathsText4.png">
+                    <div class="overlay">
+                        <div class="text">YEAR 10 MATHSCAPE CHAP 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="myGap"></div>
+
+        <!-- Code for Contact Information and Footer -->
+        <div class="myContact">
+            <div class="Logo">
+                <a href="https://www.facebook.com/sophia.cheng.3762584/" target="_blank" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+                <a href="https://www.instagram.com/anime_world0222/" target="_blank" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+                <a href="https://twitter.com/Anime_World22" target="_blank" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+                <a href="a.anime.world22@gmail.com" target="_blank" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+
+    </div>
+
+    
+</body>
+

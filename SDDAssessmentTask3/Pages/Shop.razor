@@ -1,0 +1,211 @@
+﻿@page "/shop"
+
+<title>SHOP - Fly A-way</title>
+<link href="css/Shop.css" rel="stylesheet" />
+
+
+<body>
+
+    <!-- Code for Audio -->
+    <audio controls autoplay loop>
+        <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
+    </audio> 
+
+    <div class="myWrapper" id="Wrapper">
+        
+        <!-- Code for Header -->
+        <div class="myHeader" id="myHeader">
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+
+        <!-- Code for Shop Main Background Image -->
+        <div class="HeaderImage">
+            <div class="bg-image"><img src="Images/Backgroundimg.png" width="100%"></div>
+
+            <div class="title">
+            <h1>Welcome to our Shop</h1>
+            <p>Take a look around</p>
+            </div>
+        </div>
+
+        <!-- Code for Shop Hyperlinks -->
+        <div class="myShop">
+            <div class="Shop">
+                <div class="PastPapers">
+                    <a><img src="Images/Study.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                      <div class="text">Past Papers</div>
+                    </div>
+                </div>
+                  
+                <div class="PastTests">
+                    <a><img src="Images/Study1.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                        <a id="SHOP"><div class="text">Past Tests</div></a>
+                    </div>
+                </div>
+                  
+                <div class="PastNotes">
+                    <a><img src="Images/Study2.gif" alt="Avatar" class="image" width=100%></a>
+                    <div class="middle">
+                        <div class="text">Past Notes</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Code for PastPapers and Accessories -->
+        <div class="title1"><h2>Past Papers</h2></div>
+        <div class="myBody1">
+            <div class="Section">
+                <img src="Images/MathsText1.png">
+                <img src="Images/MathsText2.png">
+                <img src="Images/MathsText3.png">
+                <img src="Images/MathsText4.png">
+                <img src="Images/MathsText5.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/MathsText6.png">
+                <img src="Images/MathsText7.png">
+                <img src="Images/MathsText8.png">
+                <img src="Images/MathsText9.png">
+                <img src="Images/MathsTextAns.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/Bi1.png">
+                <img src="Images/Bi2.png">
+                <img src="Images/Bi3.png">
+                <img src="Images/Cubic.png">
+                <img src="Images/Fractions.png">
+            </div>
+
+
+        </div>
+
+        <!-- Code for Home and Living -->
+        <div class="title2"><h2>Past Tests</h2></div>
+        <div class="myBody2">
+            <div class="Section">
+                <img src="Images/Past1.png">
+                <img src="Images/Past1A.png">
+                <img src="Images/Past2.png">
+                <img src="Images/Past2A.png">
+                <img src="Images/Past3.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/Past3A.png">
+                <img src="Images/Past4.png">
+                <img src="Images/Past4A.png">
+                <img src="Images/Past5.png">
+                <img src="Images/Past5A.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/Past6.png">
+                <img src="Images/Past6A.png">
+                <img src="Images/Past7.png">
+                <img src="Images/Past7A.png">
+                <img src="Images/Past8.png">
+            </div>
+        </div>
+
+        <!-- Code  for PastNotes and Health -->
+        <div class="title3"><h2>Past Notes</h2></div>
+        <div class="myBody3">
+            <div class="Section">
+                <img src="Images/AMC1.png">
+                <img src="Images/AMC1A.png">
+                <img src="Images/AMC2.png">
+                <img src="Images/AMC2A.png">
+                <img src="Images/AMC3.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/AMC3A.png">
+                <img src="Images/Fractions2.png">
+                <img src="Images/Line1.png">
+                <img src="Images/Mathscape9.png">
+                <img src="Images/Prob1.png">
+            </div>
+
+            <div class="Section">
+                <img src="Images/Prob2.png">
+                <img src="Images/SDDTest1.png">
+                <img src="Images/SDDSolution1.png">
+                <img src="Images/SDDTest2.png">
+                <img src="Images/SDDSolution2.png">
+            </div>
+
+
+        </div>
+
+        <div class="myGap"></div>
+
+        <!-- Code for Contact Information and Footer -->
+        <div class="myContact">
+            <div class="Logo">
+                <a href="https://www.facebook.com/sophia.cheng.3762584/" target="_blank" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+                <a href="https://www.instagram.com/anime_world0222/" target="_blank" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+                <a href="https://twitter.com/Anime_World22" target="_blank" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+                <a href="a.anime.world22@gmail.com" target="_blank" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+    </div>
+
+</body>
+

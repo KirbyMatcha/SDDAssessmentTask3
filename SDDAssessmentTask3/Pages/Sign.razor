@@ -1,0 +1,123 @@
+﻿@page "/sign"
+
+<title>SIGN UP - Fly A-way</title>
+<link href="css/Sign.css" rel="stylesheet" />
+
+
+
+
+<body>
+
+
+    <div class="myWrapper" id="Wrapper">
+        
+        <!-- Code for Header -->
+        <div class="myHeader" id="myHeader">
+            <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
+            <div class="Hyperlinks" id="Hyperlinks">
+                <div><a href=" ">HOME</a></div>
+                <div><a href="about">ABOUT US</a></div>
+                <div><a href="sign">SIGN UP</a></div>
+                <div><a href="contact">CONTACT US</a></div>
+                <div><a href="help">HELP</a></div>
+                <div class="cross" onclick="closeNav()" id="closeWindow">X</div>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="search-button">
+                <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
+
+                <div class="Menu" onclick="openNav()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mySubjects" id="mySubjects">
+            <div>MATHS</div>
+            <div>ENGLISH</div>
+            <div>SCIENCE</div>
+            <div>DRAMA</div>
+            <div>ARTS</div>
+            <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
+        </div>
+
+        <div class="moreSubjectss" id="moreSubjectss">
+            <div>GEOGRAPHY</div>
+            <div>HISTORY</div>
+            <div>MUSIC</div>
+            <div>LANGUAGES</div>
+            <div>TECHNOLOGY</div>
+        </div>
+
+        <!-- Code for Sign up Form -->
+        <div class="myBody">
+            <h2>Sign Up</h2>
+            <form name="myForm" method="post">
+                <div class="PersonalInfo">
+                    <div>
+                        <p>Full Name:</p>
+                        <input type="text" placeholder="Enter Full Name" name="fname">
+                    </div>
+                    <div>
+                        <p>Email:</p>
+                        <input type="text" placeholder="Email" name="fname">
+                    </div>
+                    <div>
+                        <p>Username:</p>
+                        <input type="text" placeholder="Enter Username" name="fname">
+                    </div>
+                    <div>
+                        <p>Password:</p>
+                        <input type="text" placeholder="Enter Password" name="fname">
+                    </div>
+                    <div>
+                        <p>Confirm Password</p>
+                        <input type="text" placeholder="Enter Password Again" name="fname">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="myCheck"> I agree to the <em>terms</em> and <em>conditions</em>
+                    </div>                    
+                    <div class="SubmitButton">
+                        <input type="submit" value="Submit Form">
+                    </div>
+                </div> 
+            </form>
+        </div>
+
+        <div class="myGap"></div>
+
+        <!-- Code for Contact Information and footer -->
+        <div class="myContact">
+            <div class="Logo">
+                <a href="https://www.facebook.com/sophia.cheng.3762584/" target="_blank" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
+                <a href="https://www.instagram.com/anime_world0222/" target="_blank" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+                <a href="https://twitter.com/Anime_World22" target="_blank" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+                <a href="a.anime.world22@gmail.com" target="_blank" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
+            </div>
+
+            <div class="Links">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="AboutUs.html">About Us</a></div>
+                <div><a href="SignUp.html" target="_blank">Sign Up</a></div>
+                <div class="exception"><a href="ContactUs.html">Contact Us</a></div>
+            </div>
+            
+            <div class="Footnote">ⓒ Anime World Inc. All rights reserved</div>
+        </div>
+
+
+    </div>
+</body>
+
+@code {
+
+}
