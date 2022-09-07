@@ -1,5 +1,5 @@
 ﻿@page "/"
-@using SDDAssessmentTask3.Data
+
 
 <link href="css/Index.css" rel="stylesheet" />
 
@@ -118,89 +118,67 @@
                 </div>
             </a>
             <div class="Content1" id="RecentContent1">
-                <p>meow</p>
+                <h1>Addition Game</h1>
+
+                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate1">@name1</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+
+                <br />
+
+                <p>@message1</p>
+
+                <p role="status">@randlnum1 + @randrnum1 =  </p>
+
+                <input type="number" @bind="@guess1" name="meow" />
+
+                <button class="btn btn-primary" @onclick="Check1">CHeck Answer</button>
             </div>
     
             <div class="Content2" id="RecentContent2">
-                <p>meow</p>
+                <h1>Subtraction Game</h1>
+
+                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate2">@name2</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+
+                <br />
+
+                <p>@message2</p>
+
+                <p role="status">@randlnum2 - @randrnum2 =  </p>
+
+                <input type="number" @bind="@guess2" name="meow" />
+
+                <button class="btn btn-primary" @onclick="Check2">CHeck Answer</button>
             </div>
     
             <div class="Content3" id="RecentContent3">
-                <div class="row1">
-                    <div><img src="ImagesUsed/recent001.png"></div>
-                    <div><img src="ImagesUsed/recent002.png"></div>
-                    <div><img src="ImagesUsed/recent003.png"></div>
-                    <div><img src="ImagesUsed/recent004.png"></div>
-                </div>
-                <div class="caption1">
-                    <p>Scarlet Nexus</p>
-                    <p>SD Gundamn World Heroes</p>
-                    <p>Night Head 2041</p>
-                    <p>Megami-ryou no Ryoubo-kun</p>
-                </div>
-                <div class="row2">
-                    <div><img src="ImagesUsed/recent005.png"></div>
-                    <div><img src="ImagesUsed/recent006.png"></div>
-                    <div><img src="ImagesUsed/recent007.png"></div>
-                    <div><img src="ImagesUsed/recent008.png"></div>
-                </div>
-                <div class="caption2">
-                    <p>Kobayashi-san Chi no Maid Dragon S</p>
-                    <p>Tsuki ga Michibiku Isekai Douchuu</p>
-                    <p>Cheat Kusushi no Slow Life: Isekai ni Tsukurou</p>
-                    <p>BanG Dream! Movie: Episode of Roselia - II:</p>
-                </div>
-                <div class="row3">
-                    <div><img src="ImagesUsed/recent009.png"></div>
-                    <div><img src="ImagesUsed/recent0010.png"></div>
-                    <div><img src="ImagesUsed/recent0011.png"></div>
-                    <div><img src="ImagesUsed/recent0012.png"></div>
-                </div>
-                <div class="caption3">
-                    <p>Seitokai Yakuindomo Movie 2</p>
-                    <p>Sketchbook: Full Color's Picture Drama</p>
-                    <p>Aria the Crepuscolo</p>
-                    <p>Fate/kaleid liner Prisma☆Illya 2wei!</p>
-                </div>
+                <h1>Multiplication Game</h1>
+
+                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate3">@name3</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+
+                <br />
+
+                <p>@message3</p>
+
+                <p role="status">@randlnum3 x @randrnum3 =  </p>
+
+                <input type="number" @bind="@guess3" name="meow" />
+
+                <button class="btn btn-primary" @onclick="Check3">CHeck Answer</button>
             </div>
     
             <div class="Content4" id="RecentContent4">
-                <div class="row1">
-                    <div><img src="ImagesUsed/recent-1.png"></div>
-                    <div><img src="ImagesUsed/recent-2.png"></div>
-                    <div><img src="ImagesUsed/recent-3.png"></div>
-                    <div><img src="ImagesUsed/recent-4.png"></div>
-                </div>
-                <div class="caption1">
-                    <p>Tsukipro The Animation 2</p>
-                    <p>Turning Mecard W: Vandyne-ui Bimil</p>
-                    <p>Tokyo 7th Sisters: Bokura wa Aozora ni Naru</p>
-                    <p>Shounan Bakusouzoku</p>
-                </div>
-                <div class="row2">
-                    <div><img src="ImagesUsed/recent-5.png"></div>
-                    <div><img src="ImagesUsed/recent-6.png"></div>
-                    <div><img src="ImagesUsed/recent-7.png"></div>
-                    <div><img src="ImagesUsed/recent-8.jpg"></div>
-                </div>
-                <div class="caption2">
-                    <p>Red Baron</p>
-                    <p>Hover Champs</p>
-                    <p>Doraemon Movie 36: Shin Nobita no Nippon Tanjou</p>
-                    <p>Potemayo Special</p>
-                </div>
-                <div class="row3">
-                    <div><img src="ImagesUsed/recent-9.png"></div>
-                    <div><img src="ImagesUsed/recent-10.png"></div>
-                    <div><img src="ImagesUsed/recent-11.png"></div>
-                    <div><img src="ImagesUsed/recent-12.png"></div>
-                </div>
-                <div class="caption3">
-                    <p>To Heart: Remember My Memories Specials</p>
-                    <p>To Heart: Remember My Memories</p>
-                    <p>Mini Dragon Specials</p>
-                    <p>Baldr Force Exe Resolution</p>
-                </div>
+                <h1>Division Game</h1> <!--need to fix later-->
+
+                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate4">@name4</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+
+                <br />
+
+                <p>@message4</p>
+
+                <p role="status">@randlnum4 / @randrnum4 =  </p>
+
+                <input type="number" @bind="@guess4" name="meow" />
+
+                <button class="btn btn-primary" @onclick="Check4">CHeck Answer</button>
             </div>
     
             <div class="Content5" id="RecentContent5">
@@ -401,6 +379,172 @@
 
 
 </body>
+
+@code {
+    
+        int answered1 = 0;
+        int answeredCorrect1 = 0;
+        int randlnum1 = 0;
+        int randrnum1 = 0;
+        int guess1 = 0;
+        int sum1 = 0;
+        string message1 = "";
+        string name1 = "First Question";
+
+
+        private void Generate1()
+        {
+
+            Random num = new Random();
+            randlnum1 = num.Next(1, 12);
+            randrnum1 = num.Next(1, 12);
+            name1 = "Next Question";
+        }
+
+        private void Check1()
+        {
+            int sum1 = randlnum1 + randrnum1;
+            if (guess1 == sum1)
+            {
+                answered1++;
+                answeredCorrect1++;
+                message1 = "Correct! You answered " + answeredCorrect1 + " correctly out of " + answered1 + ".";
+                guess1 = 0;
+            }
+            else
+            {
+                answered1++;
+                message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + ".";
+                guess1 = 0;
+            }
+            Random num = new Random();
+            randlnum1 = num.Next(1, 12);
+            randrnum1 = num.Next(1, 12);
+        }
+
+
+        int answered2 = 0;
+        int answeredCorrect2 = 0;
+        int randlnum2 = 0;
+        int randrnum2 = 0;
+        int guess2 = 0;
+        int sum2 = 0;
+        string message2 = "";
+        string name2 = "First Question";
+
+        private void Generate2()
+        {
+
+            Random num = new Random();
+            randlnum2 = num.Next(6, 12);
+            randrnum2 = num.Next(1, 6);
+            name2 = "Next Question";
+        }
+
+        private void Check2()
+        {
+            int sum2 = randlnum2 - randrnum2;
+            if (guess2 == sum2)
+            {
+                answered2++;
+                answeredCorrect2++;
+                message2 = "Correct! You answered " + answeredCorrect2 + " correctly out of " + answered2 + ".";
+                guess2 = 0;
+            }
+            else
+            {
+                answered2++;
+                message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + ".";
+                guess2 = 0;
+            }
+            Random num = new Random();
+            randlnum2 = num.Next(6, 12);
+            randrnum2 = num.Next(1, 6);
+        }
+
+    int answered3 = 0;
+    int answeredCorrect3 = 0;
+    int randlnum3 = 0;
+    int randrnum3 = 0;
+    int guess3 = 0;
+    int sum3 = 0;
+    string message3 = "";
+    string name3 = "First Question";
+
+    private void Generate3()
+    {
+        Random num = new Random();
+        randlnum3 = num.Next(1, 5);
+        randrnum3 = num.Next(1, 5);
+        name3 = "Next Question";
+    }
+
+    private void Check3()
+    {
+        int sum3 = randlnum3 * randrnum3;
+        if (guess3 == sum3)
+        {
+            answered3++;
+            answeredCorrect3++;
+            message3 = "Correct! You answered " + answeredCorrect3 + " correctly out of " + answered3 + ".";
+            guess3 = 0;
+        }
+        else
+        {
+            answered3++;
+            message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + ".";
+            guess3 = 0;
+        }
+        Random num = new Random();
+        randlnum3 = num.Next(1, 5);
+        randrnum3 = num.Next(1, 5);
+     }
+
+    int answered4 = 0;
+    int answeredCorrect4 = 0;
+    int randlnum4 = 0;
+    int randrnum4 = 0;
+    int guess4 = 0;
+    int sum4 = 0;
+    string message4 = "";
+    string name4 = "First Question";
+
+    private void Generate4()
+    {
+
+        Random num = new Random();
+        randlnum4 = num.Next(6, 12);
+        randrnum4 = num.Next(1, 6);
+        name4 = "Next Question";
+
+    }
+
+    private void Check4()
+    {
+        int sum4 = randlnum4 - randrnum4;
+        if (guess4 == sum4)
+        {
+            answered4++;
+            answeredCorrect4++;
+            message4 = "Correct! You answered " + answeredCorrect4 + " correctly out of " + answered4 + ".";
+            guess4 = 0;
+        }
+        else
+        {
+            answered4++;
+            message4 = "Correct! You answered " + answeredCorrect4 + " correctly out of " + answered4 + ".";
+            guess4 = 0;
+        }
+        Random num = new Random();
+        randlnum4 = num.Next(6, 12);
+        randrnum4 = num.Next(1, 6);
+
+
+
+    }
+
+}
+
 
 
   
