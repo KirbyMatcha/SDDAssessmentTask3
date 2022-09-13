@@ -126,7 +126,7 @@
 
                 <input type="number" @bind="@guess1" name="meow" />
 
-                <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+                <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button> 
 
                 <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
             </div>
@@ -142,25 +142,27 @@
             <div class="Content2" id="RecentContent2">
                 <h1>Subtraction Game</h1>
 
-                <button class="btn btn-primary" name="Button3" id="button2" @onclick="Generate2">@name2</button> <!--Need to make this button disappear in the code below -will need to search internet -->
-
-                <br />
-
                 <p>@message2</p>
 
                 <p role="status">@randlnum2 - @randrnum2 =  </p>
 
                 <input type="number" @bind="@guess2" name="meow" />
 
-                <button class="btn btn-primary" @onclick="Check2">CHeck Answer</button>
+                <button class="SubtractionGenerate" name="Button3" id="button2" @onclick="Generate2">Generate Question</button> 
+
+                <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
             </div>
+            <style>
+                .SubtractionGenerate {
+                    visibility: @view3;
+                }
+                .SubtractionCheck {
+                    visibility: @view4;
+                }
+            </style>
     
             <div class="Content3" id="RecentContent3">
                 <h1>Multiplication Game</h1>
-
-                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate3">@name3</button> <!--Need to make this button disappear in the code below -will need to search internet -->
-
-                <br />
 
                 <p>@message3</p>
 
@@ -168,23 +170,21 @@
 
                 <input type="number" @bind="@guess3" name="meow" />
 
-                <button class="btn btn-primary" @onclick="Check3">CHeck Answer</button>
+                <button class="MultiplicationGenerate" name="Button3" id="Meow" @onclick="Generate3">Generate Question</button>
+
+                <button class="MultiplicationCheck" @onclick="Check3">CHeck Answer</button>
             </div>
+            <style>
+                .MultiplicationGenerate {
+                    visibility: @view5;
+                }
+                .MultiplicationCheck {
+                    visibility: @view6;
+                }
+            </style>
     
             <div class="Content4" id="RecentContent4">
-                <h1>Division Game</h1> <!--need to fix later-->
-
-                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate4">@name4</button> <!--Need to make this button disappear in the code below -will need to search internet -->
-
-                <br />
-
-                <p>@message4</p>
-
-                <p role="status">@randlnum4 / @randrnum4 =  </p>
-
-                <input type="number" @bind="@guess4" name="meow" />
-
-                <button class="btn btn-primary" @onclick="Check4">CHeck Answer</button>
+                
             </div>
     
             <div class="Content5" id="RecentContent5">
@@ -438,7 +438,8 @@
         int guess2 = 0;
         int sum2 = 0;
         string message2 = "";
-        string name2 = "First Question";
+        string view3 = "visible";
+        string view4 = "hidden";
 
         private void Generate2()
         {
@@ -446,7 +447,8 @@
             Random num = new Random();
             randlnum2 = num.Next(6, 12);
             randrnum2 = num.Next(1, 6);
-            name2 = "Next Question";
+            view3 = "hidden";
+            view4 = "visible";
         }
 
         private void Check2()
@@ -465,9 +467,8 @@
                 message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + ".";
                 guess2 = 0;
             }
-            Random num = new Random();
-            randlnum2 = num.Next(6, 12);
-            randrnum2 = num.Next(1, 6);
+            view3 = "visible";
+            view4 = "hidden";
         }
 
     int answered3 = 0;
@@ -477,14 +478,16 @@
     int guess3 = 0;
     int sum3 = 0;
     string message3 = "";
-    string name3 = "First Question";
+    string view5 = "visible";
+    string view6 = "hidden";
 
     private void Generate3()
     {
         Random num = new Random();
         randlnum3 = num.Next(1, 5);
         randrnum3 = num.Next(1, 5);
-        name3 = "Next Question";
+        view5 = "hidden";
+        view6 = "visible";
     }
 
     private void Check3()
@@ -503,53 +506,11 @@
             message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + ".";
             guess3 = 0;
         }
-        Random num = new Random();
-        randlnum3 = num.Next(1, 5);
-        randrnum3 = num.Next(1, 5);
+        view3 = "hidden";
+        view4 = "visible";
      }
 
-    int answered4 = 0;
-    int answeredCorrect4 = 0;
-    int randlnum4 = 0;
-    int randrnum4 = 0;
-    int guess4 = 0;
-    int sum4 = 0;
-    string message4 = "";
-    string name4 = "First Question";
-
-    private void Generate4()
-    {
-
-        Random num = new Random();
-        randlnum4 = num.Next(6, 12);
-        randrnum4 = num.Next(1, 6);
-        name4 = "Next Question";
-
-    }
-
-    private void Check4()
-    {
-        int sum4 = randlnum4 - randrnum4;
-        if (guess4 == sum4)
-        {
-            answered4++;
-            answeredCorrect4++;
-            message4 = "Correct! You answered " + answeredCorrect4 + " correctly out of " + answered4 + ".";
-            guess4 = 0;
-        }
-        else
-        {
-            answered4++;
-            message4 = "Correct! You answered " + answeredCorrect4 + " correctly out of " + answered4 + ".";
-            guess4 = 0;
-        }
-        Random num = new Random();
-        randlnum4 = num.Next(6, 12);
-        randrnum4 = num.Next(1, 6);
-
-
-
-    }
+    
 
 }
 
