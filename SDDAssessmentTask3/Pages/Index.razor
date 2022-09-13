@@ -120,23 +120,29 @@
             <div class="Content1" id="RecentContent1">
                 <h1>Addition Game</h1>
 
-                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate1">@name1</button> <!--Need to make this button disappear in the code below -will need to search internet -->
-
-                <br />
-
                 <p>@message1</p>
 
                 <p role="status">@randlnum1 + @randrnum1 =  </p>
 
                 <input type="number" @bind="@guess1" name="meow" />
 
-                <button class="btn btn-primary" @onclick="Check1">CHeck Answer</button>
+                <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+
+                <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
             </div>
+            <style>
+                .AdditionGenerate {
+                    visibility: @view1;
+                }
+                .AdditionCheck {
+                    visibility: @view2;
+                }
+            </style>
     
             <div class="Content2" id="RecentContent2">
                 <h1>Subtraction Game</h1>
 
-                <button class="btn btn-primary" name="Button3" id="Meow" @onclick="Generate2">@name2</button> <!--Need to make this button disappear in the code below -will need to search internet -->
+                <button class="btn btn-primary" name="Button3" id="button2" @onclick="Generate2">@name2</button> <!--Need to make this button disappear in the code below -will need to search internet -->
 
                 <br />
 
@@ -389,8 +395,8 @@
         int guess1 = 0;
         int sum1 = 0;
         string message1 = "";
-        string name1 = "First Question";
-
+        string view1 = "visible";
+        string view2 = "hidden";
 
         private void Generate1()
         {
@@ -398,8 +404,11 @@
             Random num = new Random();
             randlnum1 = num.Next(1, 12);
             randrnum1 = num.Next(1, 12);
-            name1 = "Next Question";
+            view1 = "hidden";
+            view2 = "visible";
         }
+
+
 
         private void Check1()
         {
@@ -417,9 +426,8 @@
                 message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + ".";
                 guess1 = 0;
             }
-            Random num = new Random();
-            randlnum1 = num.Next(1, 12);
-            randrnum1 = num.Next(1, 12);
+            view1 = "visible";
+            view2 = "hidden";
         }
 
 

@@ -167,6 +167,7 @@ th {
                         "row3"
                         "caption3";
 }
+
 .row1 {
     grid-area: row1;
     display: flex;
