@@ -118,6 +118,7 @@
                 </div>
             </a>
             <div class="Content1" id="RecentContent1">
+                <!--Game for Addition-->
                 <h1>Addition Game</h1>
 
                 <p>@message1</p>
@@ -131,15 +132,18 @@
                 <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
             </div>
             <style>
+                <!--To make the Generate Question Button disappear and reappear; prevents the user from changing questions which they don't know how to answer, not allowing them to cheat-->
                 .AdditionGenerate {
                     visibility: @view1;
                 }
+                <!--To make the Check Answer button disappear and reappear; prevents the user from continuously pressing the button to mark the same question, prevents them from cheating-->
                 .AdditionCheck {
                     visibility: @view2;
                 }
             </style>
     
             <div class="Content2" id="RecentContent2">
+                <!--Game for Subtraction-->
                 <h1>Subtraction Game</h1>
 
                 <p>@message2</p>
@@ -153,15 +157,18 @@
                 <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
             </div>
             <style>
+                <!--Make generate question button disappear/appear-->
                 .SubtractionGenerate {
                     visibility: @view3;
                 }
+                <!--Make the check answer button disappear/appear-->
                 .SubtractionCheck {
                     visibility: @view4;
                 }
             </style>
     
             <div class="Content3" id="RecentContent3">
+                <!--Game for multiplication-->
                 <h1>Multiplication Game</h1>
 
                 <p>@message3</p>
@@ -175,9 +182,11 @@
                 <button class="MultiplicationCheck" @onclick="Check3">CHeck Answer</button>
             </div>
             <style>
+                <!--Make generate question button disappear/appear-->
                 .MultiplicationGenerate {
                     visibility: @view5;
                 }
+                <!--Make check answer button disappear/appear-->
                 .MultiplicationCheck {
                     visibility: @view6;
                 }
@@ -361,6 +370,7 @@
     <div class="myGap"></div>
 
     <!-- Code for Contact Information and Footer -->
+    <!--Takes users to the actual social media pages-->
     <div class="myContact">
         <div class="Logo">
             <a href="https://www.facebook.com/sophia.cheng.3762584/" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
@@ -379,6 +389,7 @@
         <div class="Footnote">ⓒ Fly A-way Inc. All rights reserved</div>
     </div>
 
+    <!--Background music that plays, can be paused/skipped/muted-->
     <audio controls autoplay loop>
         <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
     </audio> 
@@ -388,6 +399,7 @@
 
 @code {
     
+        //Global variables for the Addition Game 
         int answered1 = 0;
         int answeredCorrect1 = 0;
         int randlnum1 = 0;
@@ -398,14 +410,14 @@
         string view1 = "visible";
         string view2 = "hidden";
 
+        //code for generating new questions
         private void Generate1()
         {
-
             Random num = new Random();
             randlnum1 = num.Next(1, 12);
             randrnum1 = num.Next(1, 12);
-            view1 = "hidden";
-            view2 = "visible";
+            view1 = "hidden"; //makes the Generate Question button disappear
+            view2 = "visible"; //Makes the check answer button appear
         }
 
 
@@ -417,20 +429,21 @@
             {
                 answered1++;
                 answeredCorrect1++;
-                message1 = "Correct! You answered " + answeredCorrect1 + " correctly out of " + answered1 + ".";
+                message1 = "Correct! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
                 guess1 = 0;
             }
             else
             {
                 answered1++;
-                message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + ".";
+                message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
                 guess1 = 0;
             }
-            view1 = "visible";
-            view2 = "hidden";
+            view1 = "visible"; //makes the generate question button reappear
+            view2 = "hidden"; //makes the check answer button disappear again
         }
 
 
+        //Global variables for the Subtraction Game 
         int answered2 = 0;
         int answeredCorrect2 = 0;
         int randlnum2 = 0;
@@ -441,9 +454,9 @@
         string view3 = "visible";
         string view4 = "hidden";
 
+        //code for generating new questions
         private void Generate2()
         {
-
             Random num = new Random();
             randlnum2 = num.Next(6, 12);
             randrnum2 = num.Next(1, 6);
@@ -458,57 +471,59 @@
             {
                 answered2++;
                 answeredCorrect2++;
-                message2 = "Correct! You answered " + answeredCorrect2 + " correctly out of " + answered2 + ".";
+                message2 = "Correct! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
                 guess2 = 0;
             }
             else
             {
                 answered2++;
-                message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + ".";
+                message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
                 guess2 = 0;
             }
             view3 = "visible";
             view4 = "hidden";
         }
 
-    int answered3 = 0;
-    int answeredCorrect3 = 0;
-    int randlnum3 = 0;
-    int randrnum3 = 0;
-    int guess3 = 0;
-    int sum3 = 0;
-    string message3 = "";
-    string view5 = "visible";
-    string view6 = "hidden";
+        //Global variables for the Multiplication Game 
+        int answered3 = 0;
+        int answeredCorrect3 = 0;
+        int randlnum3 = 0;
+        int randrnum3 = 0;
+        int guess3 = 0;
+        int sum3 = 0;
+        string message3 = "";
+        string view5 = "visible";
+        string view6 = "hidden";
 
-    private void Generate3()
-    {
-        Random num = new Random();
-        randlnum3 = num.Next(1, 5);
-        randrnum3 = num.Next(1, 5);
-        view5 = "hidden";
-        view6 = "visible";
-    }
+        //code for generating new questions
+        private void Generate3()
+        {
+            Random num = new Random();
+            randlnum3 = num.Next(1, 5);
+            randrnum3 = num.Next(1, 5);
+            view5 = "hidden";
+            view6 = "visible";
+        }
 
-    private void Check3()
-    {
-        int sum3 = randlnum3 * randrnum3;
-        if (guess3 == sum3)
+        private void Check3()
         {
-            answered3++;
-            answeredCorrect3++;
-            message3 = "Correct! You answered " + answeredCorrect3 + " correctly out of " + answered3 + ".";
-            guess3 = 0;
-        }
-        else
-        {
-            answered3++;
-            message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + ".";
-            guess3 = 0;
-        }
-        view3 = "hidden";
-        view4 = "visible";
-     }
+            int sum3 = randlnum3 * randrnum3;
+            if (guess3 == sum3)
+            {
+                answered3++;
+                answeredCorrect3++;
+                message3 = "Correct! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
+                guess3 = 0;
+            }
+            else
+            {
+                answered3++;
+                message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
+                guess3 = 0;
+            }
+            view3 = "hidden";
+            view4 = "visible";
+         }
 
     
 
