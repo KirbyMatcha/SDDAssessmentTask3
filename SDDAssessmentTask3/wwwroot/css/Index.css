@@ -172,6 +172,9 @@ th {
 .UserName {
     grid-area: Name;
 }
+.Extra {
+    visibility:hidden;
+}
 
 .Content2 {
     display: none;
