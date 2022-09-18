@@ -4,9 +4,9 @@
 <link href="css/Index.css" rel="stylesheet" />
 
 <body>
-    
+
     <div class="myWrapper">
-        <div class="myHeader" id="myHeader"> 
+        <div class="myHeader" id="myHeader">
             <div class="myLogo"><a href=" "><img id="myHeader" src="LogosUsed/Logo.png" width="80px"></a></div>
             <div class="Hyperlinks" id="Hyperlinks">
                 <div><a href=" ">HOME</a></div>
@@ -18,23 +18,23 @@
             </div>
             <div class="search-container">
                 <form>
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit">Submit</button>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
                 </form>
             </div>
-            
+
             <div class="search-button">
                 <div class="Searching" onclick="openSearch()"><img src="Ad/Icon.png" width="25px"></div>
-                
+
                 <div class="Menu" onclick="openNav()">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
             </div>
-        
+
         </div>
-    
+
         <div class="mySubjects" id="mySubjects">
             <div>MATHS</div>
             <div>ENGLISH</div>
@@ -43,7 +43,7 @@
             <div>ARTS</div>
             <div onclick="getMore()">MORE<a class="more">&#10095;</a></div>
         </div>
-    
+
         <div class="moreSubjectss" id="moreSubjectss">
             <div>GEOGRAPHY</div>
             <div>HISTORY</div>
@@ -51,26 +51,26 @@
             <div>LANGUAGES</div>
             <div>TECHNOLOGY</div>
         </div>
-    
+
         <!--Might change this image later if I can find a better one-->
         <div class="Image">
             <img src="LogosUsed/Logo.png" width="100%" />
         </div>
-    
+
         <!-- Code for Navbar -->
-        <div class="myInd" id="navbar">            
+        <div class="myInd" id="navbar">
             <a href="#RECENT"><div>Recent</div></a>
             <a href="#POPULAR"><div>Popular</div></a>
             <a href="#SOON"><div>Coming Soon</div></a>
             <a href="#SHOP"><div>Shop</div></a>
             <a href="search"><div>Search Courses</div></a>
         </div>
-    
+
         <!-- Code for Short Introduction -->
         <div class="myIntroduction">
             <p>Welcome to Fly A-Way! Here you can explore a variety of courses and lessons on a range of subjects and you can personally arrange your lessons to be either physical or online. We provide the most updated news on changes to the subject curriculum as well as additional information in regards to certain subjects. Unlike other tutoring or coaching centres, we also run a shop will sells textbooks from all years from the latest to the oldest at a cheaper price. In addition, we have secondhand tests and lesson materials from past students from the top schools. For any help you may contact us through the social medias mentioned in <a href="contact">Contact Us</a>. You may also <a href="sign">Sign up</a> to receive notification on the latest news and keep updated daily. Enjoy!</p>
         </div>
-    
+
         <!-- Code for News -->
         <div class="myNews">
             <table>
@@ -91,63 +91,96 @@
                 </tr>
                 <tr>
                     <td>YEAR 10 MATHSCAPE CHAP 1</td>
-                </tr>                
+                </tr>
             </table>
-    
+
             <a href="news"><p>> Check out what's new</p></a>
-        </div>        
-    
+        </div>
+
         <!-- Code for Recent Releases -->
         <div class="myRecent">
             <a id="RECENT">
                 <h2>SMALL GAMES</h2>
                 <div class="button1" id="button1">
-                        <div class="button" onclick="openRecentContent1()" id="c1">1</div>
-                        <div class="button" onclick="openRecentContent2()" id="c2">2</div>
-                        <div class="button" onclick="openRecentContent3()" id="c3">3</div>
-                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
-                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                    <div class="button" onclick="openRecentContent1()" id="c1">1</div>
+                    <div class="button" onclick="openRecentContent2()" id="c2">2</div>
+                    <div class="button" onclick="openRecentContent3()" id="c3">3</div>
+                    <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                    <div class="button" onclick="openRecentContent5()" id="c5">5</div>
                 </div>
-                
+
                 <div class="buttons2" id="button2">
-                        <div class="button" onclick="openRecentContent4()" id="c4">4</div>
-                        <div class="button" onclick="openRecentContent5()" id="c5">5</div>
-                        <div class="button" onclick="openRecentContent6()" id="c6">6</div>
-                        <div class="button" onclick="openRecentContent7()" id="c7">7</div>
-                        <div class="button" onclick="openRecentContent8()" id="c8">8</div>
+                    <div class="button" onclick="openRecentContent4()" id="c4">4</div>
+                    <div class="button" onclick="openRecentContent5()" id="c5">5</div>
+                    <div class="button" onclick="openRecentContent6()" id="c6">6</div>
+                    <div class="button" onclick="openRecentContent7()" id="c7">7</div>
+                    <div class="button" onclick="openRecentContent8()" id="c8">8</div>
                 </div>
             </a>
+
             <div class="Content1" id="RecentContent1">
                 <!--Game for Addition-->
-                <h1>Addition Game</h1>
+                <div class="First">
+                    <h1>Addition Game</h1>
 
-                <p>@message1</p>
+                    <p>@message1</p>
 
-                <p role="status">@randlnum1 + @randrnum1 =  </p>
+                    <p role="status">@randlnum1 + @randrnum1 =  </p>
 
-                <input type="number" @bind="@guess1" name="meow" />
+                    <input type="number" @bind="@guess1" name="meow" />
+                </div>
 
-                <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button> 
+                <div class="CheckGenerate">
+                    <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button>
 
-                <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
-                <div>
-                <input type="submit" value="Save Progress" @onclick="handleSaveProgress">
-                <input type="text" @bind = "@name" name="Name"/>
-                @progress
-                <input type="submit" value="List All Progress" @onclick="list_p">
+                    <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
+                </div>
+
+
+                <div class="UserName">
+                    <br />
+                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
+
+                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress">
+
+                    <br />
+
+                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p">
+
+                    <br />
+                    <div class="Last">@progress </div>
+                    <br />
                 </div>
             </div>
+
             <style>
-                <!--To make the Generate Question Button disappear and reappear; prevents the user from changing questions which they don't know how to answer, not allowing them to cheat-->
+                <!-- To make the Generate Question Button disappear and reappear; prevents the user from changing questions which they don't know how to answer, not allowing them to cheat-->
                 .AdditionGenerate {
                     visibility: @view1;
+                    grid-area: Generate;
                 }
-                <!--To make the Check Answer button disappear and reappear; prevents the user from continuously pressing the button to mark the same question, prevents them from cheating-->
+                <!-- To make the Check Answer button disappear and reappear; prevents the user from continuously pressing the button to mark the same question, prevents them from cheating-->
                 .AdditionCheck {
                     visibility: @view2;
+                    grid-area: Check;
+                }
+
+                .CheckGenerate {
+                    padding-top: 15px;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: auto;
+                    grid-template-areas: "@changes";
+                }
+                .ListAll {
+                    margin-top: 15px;
+                }
+
+                .UserName {
+                    visibility: @nameV;
                 }
             </style>
-    
+
             <div class="Content2" id="RecentContent2">
                 <!--Game for Subtraction-->
                 <h1>Subtraction Game</h1>
@@ -158,21 +191,21 @@
 
                 <input type="number" @bind="@guess2" name="meow" />
 
-                <button class="SubtractionGenerate" name="Button3" id="button2" @onclick="Generate2">Generate Question</button> 
+                <button class="SubtractionGenerate" name="Button3" id="button2" @onclick="Generate2">Generate Question</button>
 
                 <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
             </div>
             <style>
-                <!--Make generate question button disappear/appear-->
+                <!-- Make generate question button disappear/appear-- >
                 .SubtractionGenerate {
                     visibility: @view3;
                 }
-                <!--Make the check answer button disappear/appear-->
+                <!-- Make the check answer button disappear/appear-- >
                 .SubtractionCheck {
                     visibility: @view4;
                 }
             </style>
-    
+
             <div class="Content3" id="RecentContent3">
                 <!--Game for multiplication-->
                 <h1>Multiplication Game</h1>
@@ -188,60 +221,27 @@
                 <button class="MultiplicationCheck" @onclick="Check3">Check Answer</button>
             </div>
             <style>
-                <!--Make generate question button disappear/appear-->
+                <!-- Make generate question button disappear/appear-- >
                 .MultiplicationGenerate {
                     visibility: @view5;
                 }
-                <!--Make check answer button disappear/appear-->
+                <!-- Make check answer button disappear/appear-- >
                 .MultiplicationCheck {
                     visibility: @view6;
                 }
             </style>
-    
+
             <div class="Content4" id="RecentContent4">
-                
+                <h1>Division Game</h1>
+                <p>Coming soon...</p>
             </div>
-    
+
             <div class="Content5" id="RecentContent5">
-                <div class="row1">
-                    <div><img src="ImagesUsed/recent--1.png"></div>
-                    <div><img src="ImagesUsed/recent--2.png"></div>
-                    <div><img src="ImagesUsed/recent--3.png"></div>
-                    <div><img src="ImagesUsed/recent--4.png"></div>
-                </div>
-                <div class="caption1">
-                    <p>Kono Danshi, Uchuujin to Tatakaemasu.</p>
-                    <p>Zero no Tsukaima: Princesses no Rondo Picture Drama</p>
-                    <p>Nanami-chan 3rd Series</p>
-                    <p>Nanami-chan 2nd Series</p>
-                </div>
-                <div class="row2">
-                    <div><img src="ImagesUsed/recent--5.png"></div>
-                    <div><img src="ImagesUsed/recent--6.png"></div>
-                    <div><img src="ImagesUsed/recent--7.png"></div>
-                    <div><img src="ImagesUsed/recent--8.png"></div>
-                </div>
-                <div class="caption2">
-                    <p>D4DJ Petit Mix</p>
-                    <p>Heartcatch Precure! Movie: Hana no Miyako de Fashion</p>
-                    <p>Futari wa Precure: Max Heart Movie 1</p>
-                    <p>Yes! Precure 5 Movie: Kagami no Kuni no Miracle</p>
-                </div>
-                <div class="row3">
-                    <div><img src="ImagesUsed/recent--9.png"></div>
-                    <div><img src="ImagesUsed/recent--10.png"></div>
-                    <div><img src="ImagesUsed/recent--11.png"></div>
-                    <div><img src="ImagesUsed/recent--12.png"></div>
-                </div>
-                <div class="caption3">
-                    <p>Mobile Suit SD Gundam Mk V</p>
-                    <p>Cyborg 009 (1979)</p>
-                    <p>Chikyuu Bouel Kazoku</p>
-                    <p>Hurrican Polymar</p>
-                </div>
+                <h1>Hangman Game</h1>
+                <p>Coming Soon...</p>
             </div>
         </div>
-    
+
         <!-- Code for Subjects List -->
         <div class="myList">
             <h3 onclick="openList()">COURSES<div class="later">Click Here</div></h3>
@@ -291,21 +291,11 @@
                 </ul>
             </div>
         </div>
-    
-    
-        <!-- Code for Last Season Releases -->
-        <div class="mySeason">
-            <h3 onclick="openSeason()">LATEST POST<div class="later">Click Here</div></h3>
-            <div class="Season" id="Season">
-                <div class="closeSeason" onclick="closeSeason()" id="closeSeason">X</div>
-                <img src="Ad/CafeScenery.png"/ width="90%">
-            </div>
-        </div>
-    
-       
+
+        <!--Code for New Textbooks-->
         <div class="mySoon">
             <a id="SOON"><h2>Coming Soon</h2></a>
-            
+
             <div class="AnimeComing">
                 <div class="Anime">
                     <img src="Images/MathsText1.png" width="100%" class="ImagesUsed">
@@ -324,10 +314,10 @@
                     <div class="overlay">YEAR 10 MATHSCAPE CHAP 4</div>
                 </div>
             </div>
-    
+
             <a href="news"><p>> Coming Soon</p></a>
-        </div> 
-    
+        </div>
+
         <!-- Code for Event -->
         <div class="myEvent">
             <div class="Info">
@@ -348,17 +338,17 @@
             <div class="PastPapers" id="SHOP">
                 <img src="Images/Study.gif" alt="Avatar" class="image" width=100%>
                 <div class="middle">
-                  <div class="text">Past Papers</div>
+                    <div class="text">Past Papers</div>
                 </div>
             </div>
-              
+
             <div class="PastTests">
                 <img src="Images/Study1.gif" alt="Avatar" class="image" width=100%>
                 <div class="middle">
                     <div class="text">Past Tests</div>
                 </div>
             </div>
-              
+
             <div class="PastNotes">
                 <img src="Images/Study2.gif" alt="Avatar" class="image" width=100%>
                 <div class="middle">
@@ -366,12 +356,12 @@
                 </div>
             </div>
         </div>
-        
-        <a href="shop" ><p>> Go to Shop</p></a>
+
+        <a href="shop"><p>> Go to Shop</p></a>
 
     </div>
 
-    
+
 
     <div class="myGap"></div>
 
@@ -380,8 +370,8 @@
     <div class="myContact">
         <div class="Logo">
             <a href="https://www.facebook.com/sophia.cheng.3762584/" title="Go to Facebook"><img src="LogosUsed/FacebookLogo.png" width=20px></a>
-            <a href="https://www.instagram.com/anime_world0222/"  title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
-            <a href="https://twitter.com/Anime_World22"  title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
+            <a href="https://www.instagram.com/anime_world0222/" title="Go to Instagram"><img src="LogosUsed/InstagramLogo.png" width=20px></a>
+            <a href="https://twitter.com/Anime_World22" title="Go to Twitter"><img src="LogosUsed/TwitterLogo.png" width=20px></a>
             <a href="a.anime.world22@gmail.com" title="Go to Mail"><img src="LogosUsed/EmailLogo.png" width=20px></a>
         </div>
 
@@ -391,21 +381,22 @@
             <div><a href="sign" target="_blank">Sign Up</a></div>
             <div class="exception"><a href="contact">Contact Us</a></div>
         </div>
-        
+
         <div class="Footnote">ⓒ Fly A-way Inc. All rights reserved</div>
     </div>
 
     <!--Background music that plays, can be paused/skipped/muted-->
     <audio controls autoplay loop>
         <source src="Audio/AnimeMusic.mp3" type="audio/mpeg">
-    </audio> 
+    </audio>
 
 
 </body>
 
 @code {
 
-    //Global variables for the Addition Game 
+
+    //Global variables for the Addition Game
     int answered1 = 0;
     int answeredCorrect1 = 0;
     int randlnum1 = 0;
@@ -415,8 +406,12 @@
     string message1 = "";
     string view1 = "visible";
     string view2 = "hidden";
+    string nameV = "hidden";
     string name = "";
+    string changes = "Generate Check";
     string progress = new string("");
+
+    //Saving Progress
     public void handleSaveProgress()
     {
         Globals.progresses.Add(new Progress(answered1, answeredCorrect1, name));
@@ -425,128 +420,129 @@
     {
         foreach (Progress theProgress in Globals.progresses)
         {
-            progress = new string(progress + theProgress.reportMe() + "<br>"); //prints out the progress
+            progress = new string(progress + theProgress.reportMe()); //prints out the progress
         }
     }
-        //code for generating new questions
-        private void Generate1()
+
+    //code for generating new questions
+    private void Generate1()
+    {
+        guess1 = 0;
+        Random num = new Random();
+        randlnum1 = num.Next(1, 12);
+        randrnum1 = num.Next(1, 12);
+        view1 = "hidden"; //makes the Generate Question button disappear
+        view2 = "visible"; //Makes the check answer button appear
+        nameV = "visible";
+        changes = "Check Generate";
+    }
+
+
+
+    private void Check1()
+    {
+        int sum1 = randlnum1 + randrnum1;
+        if (guess1 == sum1)
         {
-            Random num = new Random();
-            randlnum1 = num.Next(1, 12);
-            randrnum1 = num.Next(1, 12);
-            view1 = "hidden"; //makes the Generate Question button disappear
-            view2 = "visible"; //Makes the check answer button appear
+            answered1++;
+            answeredCorrect1++;
+            message1 = "Correct! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
         }
-
-
-
-        private void Check1()
+        else
         {
-            int sum1 = randlnum1 + randrnum1;
-            if (guess1 == sum1)
-            {
-                answered1++;
-                answeredCorrect1++;
-                message1 = "Correct! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
-                guess1 = 0;
-            }
-            else
-            {
-                answered1++;
-                message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
-                guess1 = 0;
-            }
-            view1 = "visible"; //makes the generate question button reappear
-            view2 = "hidden"; //makes the check answer button disappear again
+            answered1++;
+            message1 = "Wrong! You answered " + answeredCorrect1 + " correctly out of " + answered1 + " in the Addition Game.";
         }
+        view1 = "visible"; //makes the generate question button reappear
+        view2 = "hidden"; //makes the check answer button disappear again
+        changes = "Generate Check";
+    }
 
 
-        //Global variables for the Subtraction Game 
-        int answered2 = 0;
-        int answeredCorrect2 = 0;
-        int randlnum2 = 0;
-        int randrnum2 = 0;
-        int guess2 = 0;
-        int sum2 = 0;
-        string message2 = "";
-        string view3 = "visible";
-        string view4 = "hidden";
+    //Global variables for the Subtraction Game
+    int answered2 = 0;
+    int answeredCorrect2 = 0;
+    int randlnum2 = 0;
+    int randrnum2 = 0;
+    int guess2 = 0;
+    int sum2 = 0;
+    string message2 = "";
+    string view3 = "visible";
+    string view4 = "hidden";
 
-        //code for generating new questions
-        private void Generate2()
+    //code for generating new questions
+    private void Generate2()
+    {
+        guess2 = 0;
+        Random num = new Random();
+        randlnum2 = num.Next(6, 12);
+        randrnum2 = num.Next(1, 6);
+        view3 = "hidden";
+        view4 = "visible";
+    }
+
+    private void Check2()
+    {
+        int sum2 = randlnum2 - randrnum2;
+        if (guess2 == sum2)
         {
-            Random num = new Random();
-            randlnum2 = num.Next(6, 12);
-            randrnum2 = num.Next(1, 6);
-            view3 = "hidden";
-            view4 = "visible";
+            answered2++;
+            answeredCorrect2++;
+            message2 = "Correct! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
         }
-
-        private void Check2()
+        else
         {
-            int sum2 = randlnum2 - randrnum2;
-            if (guess2 == sum2)
-            {
-                answered2++;
-                answeredCorrect2++;
-                message2 = "Correct! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
-                guess2 = 0;
-            }
-            else
-            {
-                answered2++;
-                message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
-                guess2 = 0;
-            }
-            view3 = "visible";
-            view4 = "hidden";
+            answered2++;
+            message2 = "Wrong! You answered " + answeredCorrect2 + " correctly out of " + answered2 + " in the Subtraction Game.";
         }
+        view3 = "visible";
+        view4 = "hidden";
+    }
 
-        //Global variables for the Multiplication Game 
-        int answered3 = 0;
-        int answeredCorrect3 = 0;
-        int randlnum3 = 0;
-        int randrnum3 = 0;
-        int guess3 = 0;
-        int sum3 = 0;
-        string message3 = "";
-        string view5 = "visible";
-        string view6 = "hidden";
+    //Global variables for the Multiplication Game
+    int answered3 = 0;
+    int answeredCorrect3 = 0;
+    int randlnum3 = 0;
+    int randrnum3 = 0;
+    int guess3 = 0;
+    int sum3 = 0;
+    string message3 = "";
+    string view5 = "visible";
+    string view6 = "hidden";
 
-        //code for generating new questions
-        private void Generate3()
+    //code for generating new questions
+    private void Generate3()
+    {
+        guess3 = 0;
+        Random num = new Random();
+        randlnum3 = num.Next(1, 5);
+        randrnum3 = num.Next(1, 5);
+        view5 = "hidden";
+        view6 = "visible";
+    }
+
+    private void Check3()
+    {
+        int sum3 = randlnum3 * randrnum3;
+        if (guess3 == sum3)
         {
-            Random num = new Random();
-            randlnum3 = num.Next(1, 5);
-            randrnum3 = num.Next(1, 5);
-            view5 = "hidden";
-            view6 = "visible";
+            answered3++;
+            answeredCorrect3++;
+            message3 = "Correct! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
         }
-
-        private void Check3()
+        else
         {
-            int sum3 = randlnum3 * randrnum3;
-            if (guess3 == sum3)
-            {
-                answered3++;
-                answeredCorrect3++;
-                message3 = "Correct! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
-                guess3 = 0;
-            }
-            else
-            {
-                answered3++;
-                message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
-                guess3 = 0;
-            }
-            view3 = "hidden";
-            view4 = "visible";
-         }
+            answered3++;
+            message3 = "Wrong! You answered " + answeredCorrect3 + " correctly out of " + answered3 + " in the Multiplication Game.";
+        }
+        view3 = "hidden";
+        view4 = "visible";
+    }
 
-    
+
 
 }
 
 
 
-  
+
