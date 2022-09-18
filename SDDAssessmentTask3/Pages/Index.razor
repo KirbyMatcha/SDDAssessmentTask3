@@ -130,10 +130,12 @@
                     <input type="number" @bind="@guess1" name="meow" />
                 </div>
 
-                <div class="CheckGenerate">
-                    <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button>
+                <div class="CheckGenerateOverall">
+                    <div class="CheckGenerate">
+                        <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button>
 
-                    <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
+                        <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
+                    </div>
                 </div>
 
 
@@ -152,7 +154,6 @@
                     <br />
                 </div>
             </div>
-
             <style>
                 <!-- To make the Generate Question Button disappear and reappear; prevents the user from changing questions which they don't know how to answer, not allowing them to cheat-->
                 .AdditionGenerate {
@@ -164,7 +165,9 @@
                     visibility: @view2;
                     grid-area: Check;
                 }
-
+                .CheckGenerateOverall {
+                    grid-area: CheckGenerateOverall;
+                }
                 .CheckGenerate {
                     padding-top: 15px;
                     display: grid;
@@ -173,7 +176,13 @@
                     grid-template-areas: "@changes";
                 }
                 .ListAll {
-                    margin-top: 15px;
+                    margin: 15px 0 ;
+                    visibility: @ListAllV;
+                }
+                .Last {
+                    visibility:@LastV;
+                    padding: 2px;
+                    background-color: lightgrey;
                 }
 
                 .UserName {
@@ -183,51 +192,88 @@
 
             <div class="Content2" id="RecentContent2">
                 <!--Game for Subtraction-->
-                <h1>Subtraction Game</h1>
+                <div class="First">
+                    <h1>Subtraction Game</h1>
 
-                <p>@message2</p>
+                    <p>@message2</p>
 
-                <p role="status">@randlnum2 - @randrnum2 =  </p>
+                    <p role="status">@randlnum2 - @randrnum2 =  </p>
 
-                <input type="number" @bind="@guess2" name="meow" />
+                    <input type="number" @bind="@guess2" />
+                </div>
+                
+                <div class="CheckGenerateOverall">
+                    <div class="CheckGenerate1">
+                        <button class="SubtractionGenerate" @onclick="Generate2">Generate Question</button>
 
-                <button class="SubtractionGenerate" name="Button3" id="button2" @onclick="Generate2">Generate Question</button>
-
-                <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
+                        <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
+                    </div>
+                </div>
             </div>
             <style>
-                <!-- Make generate question button disappear/appear-- >
+                <!-- Make generate question button disappear/appear-->
                 .SubtractionGenerate {
                     visibility: @view3;
+                    grid-area: Generate1;
                 }
-                <!-- Make the check answer button disappear/appear-- >
+                <!-- Make the check answer button disappear/appear-->
                 .SubtractionCheck {
                     visibility: @view4;
+                    grid-area: Check1;
+                }
+                .CheckGenerateOverall {
+                    grid-area: CheckGenerateOverall;
+                }
+                .CheckGenerate1 {
+                    padding-top: 15px;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: auto;
+                    grid-template-areas: "@changes1";
                 }
             </style>
 
             <div class="Content3" id="RecentContent3">
                 <!--Game for multiplication-->
-                <h1>Multiplication Game</h1>
+                <div class="First">
+                    <h1>Multiplication Game</h1>
 
-                <p>@message3</p>
+                    <p>@message3</p>
 
-                <p role="status">@randlnum3 x @randrnum3 =  </p>
+                    <p role="status">@randlnum3 x @randrnum3 =  </p>
 
-                <input type="number" @bind="@guess3" name="meow" />
+                    <input type="number" @bind="@guess3" name="meow" />
+                </div>
 
-                <button class="MultiplicationGenerate" name="Button3" id="Meow" @onclick="Generate3">Generate Question</button>
+                <div class="CheckGenerateOverall">
+                    <div class="CheckGenerate2">
+                        <button class="MultiplicationGenerate" @onclick="Generate3">Generate Question</button>
 
-                <button class="MultiplicationCheck" @onclick="Check3">Check Answer</button>
+                        <button class="MultiplicationCheck" @onclick="Check3">Check Answer</button>
+                    </div>
+                </div>
             </div>
             <style>
-                <!-- Make generate question button disappear/appear-- >
+                <!-- Make generate question button disappear/appear-->
                 .MultiplicationGenerate {
                     visibility: @view5;
+                    grid-area: Generate2;
                 }
-                <!-- Make check answer button disappear/appear-- >
+                <!-- Make check answer button disappear/appear-->
                 .MultiplicationCheck {
                     visibility: @view6;
+                    grid-area: Check2;
+                }
+
+                .CheckGenerateOverall {
+                    grid-area: CheckGenerateOverall;
+                }
+                .CheckGenerate2 {
+                    padding-top: 15px;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    grid-template-rows: auto;
+                    grid-template-areas: "@changes2";
                 }
             </style>
 
@@ -407,6 +453,8 @@
     string view1 = "visible";
     string view2 = "hidden";
     string nameV = "hidden";
+    string ListAllV = "hidden";
+    string LastV = "hidden";
     string name = "";
     string changes = "Generate Check";
     string progress = new string("");
@@ -414,12 +462,15 @@
     //Saving Progress
     public void handleSaveProgress()
     {
+        ListAllV = "visible";
         Globals.progresses.Add(new Progress(answered1, answeredCorrect1, name));
     }
     public void list_p()
     {
         foreach (Progress theProgress in Globals.progresses)
         {
+            progress = "";
+            LastV = "visible";
             progress = new string(progress + theProgress.reportMe()); //prints out the progress
         }
     }
@@ -469,6 +520,7 @@
     string message2 = "";
     string view3 = "visible";
     string view4 = "hidden";
+    string changes1 = "Generate1 Check1";
 
     //code for generating new questions
     private void Generate2()
@@ -479,6 +531,7 @@
         randrnum2 = num.Next(1, 6);
         view3 = "hidden";
         view4 = "visible";
+        changes1 = "Check1 Generate1";
     }
 
     private void Check2()
@@ -497,6 +550,7 @@
         }
         view3 = "visible";
         view4 = "hidden";
+        changes1 = "Generate1 Check1";
     }
 
     //Global variables for the Multiplication Game
@@ -509,6 +563,7 @@
     string message3 = "";
     string view5 = "visible";
     string view6 = "hidden";
+    string changes2 = "Generate2 Check2";
 
     //code for generating new questions
     private void Generate3()
@@ -519,6 +574,7 @@
         randrnum3 = num.Next(1, 5);
         view5 = "hidden";
         view6 = "visible";
+        changes2 = "Check2 Generate2";
     }
 
     private void Check3()
@@ -537,6 +593,7 @@
         }
         view3 = "hidden";
         view4 = "visible";
+        changes2 = "Generate2 Check2";
     }
 
 
