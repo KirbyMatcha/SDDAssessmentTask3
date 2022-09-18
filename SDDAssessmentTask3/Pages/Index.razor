@@ -130,6 +130,12 @@
                 <button class="AdditionGenerate" name="Button3" id="button1" @onclick="Generate1">Generate Question</button> 
 
                 <button class="AdditionCheck" @onclick="Check1">Check Answer</button>
+                <div>
+                <input type="submit" value="Save Progress" @onclick="handleSaveProgress">
+                <input type="text" @bind = "@name" name="Name"/>
+                @progress
+                <input type="submit" value="List All Progress" @onclick="list_p">
+                </div>
             </div>
             <style>
                 <!--To make the Generate Question Button disappear and reappear; prevents the user from changing questions which they don't know how to answer, not allowing them to cheat-->
@@ -179,7 +185,7 @@
 
                 <button class="MultiplicationGenerate" name="Button3" id="Meow" @onclick="Generate3">Generate Question</button>
 
-                <button class="MultiplicationCheck" @onclick="Check3">CHeck Answer</button>
+                <button class="MultiplicationCheck" @onclick="Check3">Check Answer</button>
             </div>
             <style>
                 <!--Make generate question button disappear/appear-->
@@ -398,18 +404,30 @@
 </body>
 
 @code {
-    
-        //Global variables for the Addition Game 
-        int answered1 = 0;
-        int answeredCorrect1 = 0;
-        int randlnum1 = 0;
-        int randrnum1 = 0;
-        int guess1 = 0;
-        int sum1 = 0;
-        string message1 = "";
-        string view1 = "visible";
-        string view2 = "hidden";
 
+    //Global variables for the Addition Game 
+    int answered1 = 0;
+    int answeredCorrect1 = 0;
+    int randlnum1 = 0;
+    int randrnum1 = 0;
+    int guess1 = 0;
+    int sum1 = 0;
+    string message1 = "";
+    string view1 = "visible";
+    string view2 = "hidden";
+    string name = "";
+    string progress = new string("");
+    public void handleSaveProgress()
+    {
+        Globals.progresses.Add(new Progress(answered1, answeredCorrect1, name));
+    }
+    public void list_p()
+    {
+        foreach (Progress theProgress in Globals.progresses)
+        {
+            progress = new string(progress + theProgress.reportMe() + "<br>"); //prints out the progress
+        }
+    }
         //code for generating new questions
         private void Generate1()
         {
