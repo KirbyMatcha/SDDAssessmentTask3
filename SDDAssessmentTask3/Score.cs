@@ -19,7 +19,9 @@ namespace SDDAssessmentTask3
         }
         public string reportMe()
         {
-            return "My score is  " + answeredCorrect1 + " out of " + answered1 + " and my name is " + name;
+            return "My score is  " + answeredCorrect1 + " out of " + answered1 + " in Additions and my name is " + name;
         }
+
+        
     }
 }
