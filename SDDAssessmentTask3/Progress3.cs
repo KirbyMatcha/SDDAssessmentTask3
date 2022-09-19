@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SDDAssessmentTask3
 {
-    public class Progress
+    public class Progress3
     {
         public int answered1;
         public int answeredCorrect1;
         public string name;
-        public Progress(int _answered1, int _answeredCorrect1, string _name)
+        public Progress3(int _answered1, int _answeredCorrect1, string _name)
         {
             answered1 = _answered1;
             answeredCorrect1 = _answeredCorrect1;

@@ -143,11 +143,11 @@
                     <br />
                     <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
-                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress">
+                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress1">
 
                     <br />
 
-                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p">
+                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p1">
 
                     <br />
                     <div class="Last">@progress </div>
@@ -209,10 +209,24 @@
                         <button class="SubtractionCheck" @onclick="Check2">Check Answer</button>
                     </div>
                 </div>
+                <div class="UserName">
+                    <br />
+                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
+                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress2">
+
+                    <br />
+
+                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p2">
+
+                    <br />
+                    <div class="Last">@progress </div>
+                    <br />
+                </div>
                 <div class="UserName">
                     <div class="Extra">pp</div>
                 </div>
+                
             </div>
             <style>
                 <!-- Make generate question button disappear/appear-->
@@ -256,7 +270,20 @@
                         <button class="MultiplicationCheck" @onclick="Check3">Check Answer</button>
                     </div>
                 </div>
+                 <div class="UserName">
+                   <br />
+                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
+                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress3">
+
+                    <br />
+
+                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p3">
+
+                    <br />
+                    <div class="Last">@progress </div>
+                    <br />
+                </div>
                 <div class="UserName">
                     <div class="Extra">pp</div>
                 </div>
@@ -468,14 +495,42 @@
     string progress = new string("");
 
     //Saving Progress
-    public void handleSaveProgress()
+    public void handleSaveProgress1()
     {
         ListAllV = "visible";
-        Globals.progresses.Add(new Progress(answered1, answeredCorrect1, name));
+        Globals1.progresses.Add(new Progress1(answered1, answeredCorrect1, name));
     }
-    public void list_p()
+    public void list_p1()
     {
-        foreach (Progress theProgress in Globals.progresses)
+        foreach (Progress1 theProgress in Globals1.progresses)
+        {
+            progress = "";
+            LastV = "visible";
+            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+        }
+    }
+    public void handleSaveProgress2()
+    {
+        ListAllV = "visible";
+        Globals2.progresses.Add(new Progress2(answered1, answeredCorrect1, name));
+    }
+    public void list_p2()
+    {
+        foreach (Progress2 theProgress in Globals2.progresses)
+        {
+            progress = "";
+            LastV = "visible";
+            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+        }
+    }
+    public void handleSaveProgress3()
+    {
+        ListAllV = "visible";
+        Globals3.progresses.Add(new Progress3(answered1, answeredCorrect1, name));
+    }
+    public void list_p3()
+    {
+        foreach (Progress3 theProgress in Globals3.progresses)
         {
             progress = "";
             LastV = "visible";
