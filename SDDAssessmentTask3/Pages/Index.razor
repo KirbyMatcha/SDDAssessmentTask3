@@ -140,18 +140,20 @@
 
 
                 <div class="UserName">
-                    <br />
-                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
+                    <div class="UserName1">
+                        <br />
+                        <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
-                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress1">
+                        <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress1">
 
-                    <br />
+                        <br />
 
-                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p1">
+                        <input type="submit" class="ListAll1" value="List All Progress" @onclick="list_p1">
 
-                    <br />
-                    <div class="Last">@progress </div>
-                    <br />
+                        <br />
+                        <div class="Last1">@progress </div>
+                        <br />
+                    </div>
                 </div>
             </div>
             <style>
@@ -175,18 +177,18 @@
                     grid-template-rows: auto;
                     grid-template-areas: "@changes";
                 }
-                .ListAll {
+                .ListAll1 {
                     margin: 15px 0 ;
-                    visibility: @ListAllV;
+                    visibility: @ListAllV1;
                 }
-                .Last {
-                    visibility:@LastV;
+                .Last1 {
+                    visibility:@LastV1;
                     padding: 2px;
                     background-color: lightgrey;
                 }
 
-                .UserName {
-                    visibility: @nameV;
+                .UserName1 {
+                    visibility: @nameV1;
                 }
             </style>
 
@@ -210,21 +212,20 @@
                     </div>
                 </div>
                 <div class="UserName">
-                    <br />
-                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
+                    <div class="UserName2">
+                        <br />
+                        <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
-                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress2">
+                        <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress2">
 
-                    <br />
+                        <br />
 
-                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p2">
+                        <input type="submit" class="ListAll2" value="List All Progress" @onclick="list_p2">
 
-                    <br />
-                    <div class="Last">@progress </div>
-                    <br />
-                </div>
-                <div class="UserName">
-                    <div class="Extra">pp</div>
+                        <br />
+                        <div class="Last2">@progress </div>
+                        <br />
+                    </div>
                 </div>
                 
             </div>
@@ -249,6 +250,19 @@
                     grid-template-rows: auto;
                     grid-template-areas: "@changes1";
                 }
+                .ListAll2 {
+                    margin: 15px 0 ;
+                    visibility: @ListAllV2;
+                }
+                .Last2 {
+                    visibility:@LastV2;
+                    padding: 2px;
+                    background-color: lightgrey;
+                }
+
+                .UserName2 {
+                    visibility: @nameV2;
+                }
             </style>
 
             <div class="Content3" id="RecentContent3">
@@ -271,21 +285,20 @@
                     </div>
                 </div>
                  <div class="UserName">
-                   <br />
-                    <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
+                    <div class="UserName3">
+                        <br />
+                        <input class="UserNameAdd" type="text" placeholder="Enter User Name..." @bind="@name" name="Name" />
 
-                    <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress3">
+                        <input class="SaveProgressAdd" type="submit" value="Save Progress" @onclick="handleSaveProgress3">
 
-                    <br />
+                        <br />
 
-                    <input type="submit" class="ListAll" value="List All Progress" @onclick="list_p3">
+                        <input type="submit" class="ListAll3" value="List All Progress" @onclick="list_p3">
 
-                    <br />
-                    <div class="Last">@progress </div>
-                    <br />
-                </div>
-                <div class="UserName">
-                    <div class="Extra">pp</div>
+                        <br />
+                        <div class="Last3">@progress </div>
+                        <br />
+                    </div>
                 </div>
             </div>
             <style>
@@ -309,6 +322,19 @@
                     grid-template-columns: 50% 50%;
                     grid-template-rows: auto;
                     grid-template-areas: "@changes2";
+                }
+                .ListAll3 {
+                    margin: 15px 0 ;
+                    visibility: @ListAllV3;
+                }
+                .Last3 {
+                    visibility:@LastV3;
+                    padding: 2px;
+                    background-color: lightgrey;
+                }
+
+                .UserName3 {
+                    visibility: @nameV3;
                 }
             </style>
 
@@ -487,9 +513,9 @@
     string message1 = "";
     string view1 = "visible";
     string view2 = "hidden";
-    string nameV = "hidden";
-    string ListAllV = "hidden";
-    string LastV = "hidden";
+    string nameV1 = "hidden";
+    string ListAllV1 = "hidden";
+    string LastV1 = "hidden";
     string name = "";
     string changes = "Generate Check";
     string progress = new string("");
@@ -497,7 +523,7 @@
     //Saving Progress
     public void handleSaveProgress1()
     {
-        ListAllV = "visible";
+        ListAllV1 = "visible";
         Globals1.progresses.Add(new Progress1(answered1, answeredCorrect1, name));
     }
     public void list_p1()
@@ -505,35 +531,7 @@
         foreach (Progress1 theProgress in Globals1.progresses)
         {
             progress = "";
-            LastV = "visible";
-            progress = new string(progress + theProgress.reportMe()); //prints out the progress
-        }
-    }
-    public void handleSaveProgress2()
-    {
-        ListAllV = "visible";
-        Globals2.progresses.Add(new Progress2(answered1, answeredCorrect1, name));
-    }
-    public void list_p2()
-    {
-        foreach (Progress2 theProgress in Globals2.progresses)
-        {
-            progress = "";
-            LastV = "visible";
-            progress = new string(progress + theProgress.reportMe()); //prints out the progress
-        }
-    }
-    public void handleSaveProgress3()
-    {
-        ListAllV = "visible";
-        Globals3.progresses.Add(new Progress3(answered1, answeredCorrect1, name));
-    }
-    public void list_p3()
-    {
-        foreach (Progress3 theProgress in Globals3.progresses)
-        {
-            progress = "";
-            LastV = "visible";
+            LastV1 = "visible";
             progress = new string(progress + theProgress.reportMe()); //prints out the progress
         }
     }
@@ -547,7 +545,7 @@
         randrnum1 = num.Next(1, 12);
         view1 = "hidden"; //makes the Generate Question button disappear
         view2 = "visible"; //Makes the check answer button appear
-        nameV = "visible";
+        nameV1 = "visible";
         changes = "Check Generate";
     }
 
@@ -584,6 +582,24 @@
     string view3 = "visible";
     string view4 = "hidden";
     string changes1 = "Generate1 Check1";
+    string nameV2 = "hidden";
+    string ListAllV2 = "hidden";
+    string LastV2 = "hidden";
+
+    public void handleSaveProgress2()
+    {
+        ListAllV2 = "visible";
+        Globals2.progresses.Add(new Progress2(answered1, answeredCorrect1, name));
+    }
+    public void list_p2()
+    {
+        foreach (Progress2 theProgress in Globals2.progresses)
+        {
+            progress = "";
+            LastV2 = "visible";
+            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+        }
+    }
 
     //code for generating new questions
     private void Generate2()
@@ -594,6 +610,7 @@
         randrnum2 = num.Next(1, 6);
         view3 = "hidden";
         view4 = "visible";
+        nameV2 = "visible";
         changes1 = "Check1 Generate1";
     }
 
@@ -627,6 +644,9 @@
     string view5 = "visible";
     string view6 = "hidden";
     string changes2 = "Generate2 Check2";
+    string nameV3 = "hidden";
+    string ListAllV3 = "hidden";
+    string LastV3 = "hidden";
 
     //code for generating new questions
     private void Generate3()
@@ -637,6 +657,7 @@
         randrnum3 = num.Next(1, 5);
         view5 = "hidden";
         view6 = "visible";
+        nameV3 = "visible";
         changes2 = "Check2 Generate2";
     }
 
@@ -657,6 +678,20 @@
         view5 = "visible";
         view6 = "hidden";
         changes2 = "Generate2 Check2";
+    }
+    public void handleSaveProgress3()
+    {
+        ListAllV3 = "visible";
+        Globals3.progresses.Add(new Progress3(answered1, answeredCorrect1, name));
+    }
+    public void list_p3()
+    {
+        foreach (Progress3 theProgress in Globals3.progresses)
+        {
+            progress = "";
+            LastV3 = "visible";
+            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+        }
     }
 
 
