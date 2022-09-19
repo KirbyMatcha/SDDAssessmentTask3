@@ -17,9 +17,9 @@ namespace SDDAssessmentTask3
             answeredCorrect1 = _answeredCorrect1;
             name = _name;
         }
-        public string reportMe()
+        public string reportMe1()
         {
-            return "My score is  " + answeredCorrect1 + " out of " + answered1 + " in Additions and my name is " + name;
+            return "My score is  " + answeredCorrect1 + " out of " + answered1 + " in Addition and my name is " + name;
         }
 
         

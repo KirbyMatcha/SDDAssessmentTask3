@@ -8,18 +8,18 @@ namespace SDDAssessmentTask3
 {
     public class Progress2
     {
-        public int answered1;
-        public int answeredCorrect1;
+        public int answered2;
+        public int answeredCorrect2;
         public string name;
-        public Progress2(int _answered1, int _answeredCorrect1, string _name)
+        public Progress2(int _answered2, int _answeredCorrect2, string _name)
         {
-            answered1 = _answered1;
-            answeredCorrect1 = _answeredCorrect1;
+            answered2 = _answered2;
+            answeredCorrect2 = _answeredCorrect2;
             name = _name;
         }
-        public string reportMe()
+        public string reportMe2()
         {
-            return "My score is  " + answeredCorrect1 + " out of " + answered1 + " in Additions and my name is " + name;
+            return "My score is  " + answeredCorrect2 + " out of " + answered2 + " in Subtraction and my name is " + name;
         }
 
         

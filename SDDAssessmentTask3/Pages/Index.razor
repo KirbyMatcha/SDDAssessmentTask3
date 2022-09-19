@@ -151,7 +151,7 @@
                         <input type="submit" class="ListAll1" value="List All Progress" @onclick="list_p1">
 
                         <br />
-                        <div class="Last1">@progress </div>
+                        <div class="Last1">@progress1 </div>
                         <br />
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                         <input type="submit" class="ListAll2" value="List All Progress" @onclick="list_p2">
 
                         <br />
-                        <div class="Last2">@progress </div>
+                        <div class="Last2">@progress2 </div>
                         <br />
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                         <input type="submit" class="ListAll3" value="List All Progress" @onclick="list_p3">
 
                         <br />
-                        <div class="Last3">@progress </div>
+                        <div class="Last3">@progress3 </div>
                         <br />
                     </div>
                 </div>
@@ -518,7 +518,7 @@
     string LastV1 = "hidden";
     string name = "";
     string changes = "Generate Check";
-    string progress = new string("");
+    string progress1 = new string("");
 
     //Saving Progress
     public void handleSaveProgress1()
@@ -530,9 +530,9 @@
     {
         foreach (Progress1 theProgress in Globals1.progresses)
         {
-            progress = "";
+            progress1 = "";
             LastV1 = "visible";
-            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+            progress1 = new string(progress1 + theProgress.reportMe1()); //prints out the progress
         }
     }
 
@@ -585,19 +585,19 @@
     string nameV2 = "hidden";
     string ListAllV2 = "hidden";
     string LastV2 = "hidden";
-
+    string progress2 = new string("");
     public void handleSaveProgress2()
     {
         ListAllV2 = "visible";
-        Globals2.progresses.Add(new Progress2(answered1, answeredCorrect1, name));
+        Globals2.progresses.Add(new Progress2(answered2, answeredCorrect2, name));
     }
     public void list_p2()
     {
         foreach (Progress2 theProgress in Globals2.progresses)
         {
-            progress = "";
+            progress2 = "";
             LastV2 = "visible";
-            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+            progress2 = new string(progress2 + theProgress.reportMe2()); //prints out the progress
         }
     }
 
@@ -647,7 +647,7 @@
     string nameV3 = "hidden";
     string ListAllV3 = "hidden";
     string LastV3 = "hidden";
-
+    string progress3 = new string("");
     //code for generating new questions
     private void Generate3()
     {
@@ -688,9 +688,9 @@
     {
         foreach (Progress3 theProgress in Globals3.progresses)
         {
-            progress = "";
+            progress3 = "";
             LastV3 = "visible";
-            progress = new string(progress + theProgress.reportMe()); //prints out the progress
+            progress3 = new string(progress3 + theProgress.reportMe3()); //prints out the progress
         }
     }
 
